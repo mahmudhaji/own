@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <script>
+        // Function to switch language
+        function switchLanguage(language) {
+            // You can implement your logic to change the language here
+            // For demonstration purposes, let's change the content of a paragraph
+
+            // Replace 'content' with the actual id of the element you want to change
+            var contentElement = document.getElementById('content');
+
+            if (language === 'English') {
+                contentElement.textContent = 'Hello, this is the English content.';
+            } else if (language === 'Kiswahili') {
+                contentElement.textContent = 'Habari, hii ni yaliyomo kwa Kiswahili.';
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link page-scroll" href="#contact">CONTACT</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link page-scroll" href="javascript:void(0);" onclick="switchLanguage('English')">English</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link page-scroll" href="javascript:void(0);" onclick="switchLanguage('Kiswahili')">Kiswahili</a>
+        </li>
+    </ul>
+
+    <!-- Content that you want to dynamically change based on language -->
+    <p id="content">Hello, this is the default content.</p>
+
+</body>
+
+</html>
